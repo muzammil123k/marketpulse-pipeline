@@ -1,0 +1,23 @@
+# Secrets & Environments
+.env
+.venv
+env/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# OS
+.DS_Store
