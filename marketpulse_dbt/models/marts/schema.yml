@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_technical_indicators
+    description: "The Gold layer: Analytics-ready table with pre-computed financial indicators."
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+
+      - name: market_date
+        tests:
+          - not_null
+
+      - name: close_price
+        tests:
+          - not_null
+
+      # Test our math! These should never be null if the calculations worked.
+      - name: sma_20
+        tests:
+          - not_null
+          
+      - name: rsi_14
+        description: "Relative Strength Index. Must always be bounded between 0 and 100."
+        tests:
+          - not_null

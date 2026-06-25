@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_historical_ohlcv
+    description: "Cleaned and standardized historical stock data."
+    columns:
+      - name: ticker
+        description: "The stock ticker symbol."
+        tests:
+          - not_null
+
+      - name: market_date
+        description: "The trading date."
+        tests:
+          - not_null
+
+      - name: close_price
+        description: "The closing price. Must never be null."
+        tests:
+          - not_null
+
+      - name: volume
+        description: "Trading volume. Should always be zero or positive."
+        tests:
+          - not_null

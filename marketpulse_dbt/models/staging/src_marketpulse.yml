@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: marketpulse_raw
+    database: MARKETPULSE_DB
+    schema: BRONZE
+    tables:
+      - name: RAW_HISTORICAL_OHLCV
+        description: "Raw historical stock market data ingested from Azure Data Lake."
