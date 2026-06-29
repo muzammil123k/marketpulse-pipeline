@@ -12,6 +12,8 @@ __pycache__/
 .terraform/
 *.tfstate
 *.tfstate.backup
+historical_stock_data_25.parquet
+.parquet
 .terraform.lock.hcl
 
 # dbt
